@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Tack för din beställning</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2dfdb 100%), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1440&q=80') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        html, body { height: 100%; }
+        .bg-graphics { display: none; }
+        .container {
+            position: relative;
+            z-index: 1;
+            background: #fff;
+            box-shadow: 0 6px 32px rgba(44,62,80,0.07);
+            border-radius: 18px;
+            padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+            max-width: 440px;
+            width: 95%;
+            margin: 2.5rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1a2e2b;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            font-size: 2.1rem;
+        }
+        p {
+            color: #2d3a3a;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        a.button {
+            display: inline-block;
+            background: #1a2e2b;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 1.2rem;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1), transform 0.25s cubic-bezier(.4,0,.2,1);
+            box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+            letter-spacing: 0.5px;
+            width: 100%;
+            text-align: center;
+        }
+        a.button:hover, a.button:focus-visible {
+            background: #25443d;
+            box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+            transform: translateY(-2px) scale(1.04);
+            outline: none;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px 20px 10px;
+                max-width: 98vw;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+            body {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-graphics">
+        <svg width="100%" height="100%" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <ellipse cx="1200" cy="200" rx="320" ry="120" fill="#00bcd4" fill-opacity="0.32"/>
+            <ellipse cx="300" cy="700" rx="400" ry="140" fill="#009688" fill-opacity="0.22"/>
+            <ellipse cx="900" cy="800" rx="300" ry="100" fill="#00acc1" fill-opacity="0.19"/>
+            <path d="M0 700 Q 400 800 900 700 T 1440 700 V900 H0Z" fill="#26a69a" fill-opacity="0.28"/>
+            <path d="M0 800 Q 600 900 1440 800 V900 H0Z" fill="#4dd0e1" fill-opacity="0.22"/>
+            <ellipse cx="200" cy="200" rx="90" ry="40" fill="#fff176" fill-opacity="0.22"/>
+            <ellipse cx="1240" cy="600" rx="60" ry="30" fill="#ec407a" fill-opacity="0.22"/>
+            <ellipse cx="700" cy="300" rx="60" ry="60" fill="#ffb300" fill-opacity="0.18"/>
+            <ellipse cx="1100" cy="400" rx="40" ry="80" fill="#7e57c2" fill-opacity="0.18"/>
+            <ellipse cx="400" cy="400" rx="50" ry="20" fill="#d81b60" fill-opacity="0.18"/>
+            <ellipse cx="900" cy="150" rx="30" ry="30" fill="#fff176" fill-opacity="0.18"/>
+            <g opacity="0.22">
+                <path d="M220 500 Q230 480 240 500 Q250 520 220 540 Q190 520 200 500 Q210 480 220 500 Z" fill="#e91e63"/>
+                <path d="M1300 300 Q1310 280 1320 300 Q1330 320 1300 340 Q1270 320 1280 300 Q1290 280 1300 300 Z" fill="#e91e63"/>
+            </g>
+            <circle cx="400" cy="850" r="8" fill="#fff" fill-opacity="0.22"/>
+            <circle cx="600" cy="870" r="5" fill="#fff" fill-opacity="0.22"/>
+            <circle cx="800" cy="860" r="7" fill="#fff" fill-opacity="0.22"/>
+            <circle cx="1000" cy="880" r="6" fill="#fff" fill-opacity="0.22"/>
+            <path d="M100 100 Q 200 150 300 100 T 500 100" stroke="#00bcd4" stroke-width="3" fill="none" opacity="0.18"/>
+            <path d="M1200 850 Q 1300 800 1400 850" stroke="#009688" stroke-width="3" fill="none" opacity="0.18"/>
+            <g opacity="0.18">
+                <path d="M600 600 Q610 580 620 600 Q630 620 600 640 Q570 620 580 600 Q590 580 600 600 Z" fill="#ec407a"/>
+                <path d="M800 200 Q810 180 820 200 Q830 220 800 240 Q770 220 780 200 Q790 180 800 200 Z" fill="#ffb300"/>
+            </g>
+        </svg>
+    </div>
+    <div class="container">
+        <h1>Tack för din beställning!</h1>
+        <p>Vi har tagit emot din diktförfrågan och återkommer så snart vi kan.<br>Ha en fin dag!</p>
+        <a href="index.html" class="button">Till startsidan</a>
+    </div>
+</body>
+</html>
