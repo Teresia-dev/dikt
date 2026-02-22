@@ -3,171 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skapa dikt</title>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            /* Bytt bakgrund till rosa-orange gradient enligt önskemål */
-            background: linear-gradient(135deg, #ff9a9e 0%, #ffb347 100%);
-            background-size: cover;
-            min-height: 100vh;
-            margin: 0;
-            position: relative;
-            overflow-x: hidden;
-            opacity: 0;
-            animation: fadeInBody 1.1s cubic-bezier(.4,0,.2,1) 0.1s forwards;
-        }
-        @keyframes fadeInBody {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        html, body { height: 100%; }
-        .container {
-            position: relative;
-            z-index: 1;
-            background: #fff;
-            box-shadow: 0 6px 32px rgba(44,62,80,0.07);
-            border-radius: 18px;
-            padding: 2.7rem 2.2rem 2.2rem 2.2rem;
-            max-width: 440px;
-            width: 95%;
-            margin: 3.5rem auto 2.5rem auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #1a2e2b;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            font-size: 2.1rem;
-            text-align: center;
-        }
-        form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
-        }
-        form > div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 1.1rem;
-        }
-        label {
-            font-size: 1rem;
-            color: #2d3a3a;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-        }
-        input, select, textarea {
-            align-self: stretch;
-            padding: 0.85rem 1.1rem;
-            border: 1.5px solid #e0e4e7;
-            border-radius: 8px;
-            font-size: 1rem;
-            background: #f7fafc;
-            color: #2d3a3a;
-            outline: none;
-            transition: border 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1);
-            font-family: 'Open Sans', Arial, sans-serif;
-            margin-bottom: 0.1rem;
-        }
-        input:focus, select:focus, textarea:focus {
-            border: 1.5px solid #25443d;
-            box-shadow: 0 0 0 2px #e0f2f1;
-            background: #fff;
-        }
-        button {
-            background: #1a2e2b;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 1rem 0;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 1.2rem;
-            transition: background 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1), transform 0.25s cubic-bezier(.4,0,.2,1);
-            box-shadow: 0 2px 8px rgba(44,62,80,0.04);
-            letter-spacing: 0.5px;
-        }
-        button:hover, button:focus-visible {
-            background: #25443d;
-            box-shadow: 0 8px 24px rgba(44,62,80,0.13);
-            transform: translateY(-2px) scale(1.04);
-            outline: none;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 0 0.5rem;
-            }
-            .container {
-                padding: 18px 4vw 18px 4vw;
-                max-width: 100vw;
-                margin: 2.2rem 0 1.5rem 0;
-            }
-            h1 {
-                font-size: 1.18rem;
-                margin-bottom: 1.1rem;
-                line-height: 1.25;
-                letter-spacing: 0.5px;
-            }
-            form > div {
-                margin-bottom: 0.7rem;
-            }
-            input, select, textarea {
-                font-size: 0.98rem;
-                padding: 0.7rem 0.7rem;
-            }
-            button {
-                font-size: 1rem;
-                padding: 0.9rem 0;
-            }
-        }
-    </style>
+    <title>Automation - processer och IoT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Framför ditt budskap med en dikt</h1>
-        <form action="https://formspree.io/f/myzjaeal" method="POST">
-            <div>
-                <label for="name">Ditt namn</label>
-                <input type="text" id="name" name="Namn" required autocomplete="name">
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Automation</h1>
+                <p class="tagline">processer och IoT</p>
             </div>
-            <div>
-                <label for="tone">Ton</label>
-                <select id="tone" name="Ton" required>
-                    <option value="">Välj ton</option>
-                    <option value="Allvarlig">Allvarlig</option>
-                    <option value="Busig">Busig</option>
-                    <option value="Episk">Episk</option>
-                    <option value="Fräck">Fräck</option>
-                    <option value="Historisk">Historisk</option>
-                    <option value="Lekfull">Lekfull</option>
-                    <option value="Oväntad">Oväntad</option>
-                    <option value="Romantisk">Romantisk</option>
-                </select>
+            <nav class="nav">
+                <a href="#hem" class="nav-link active">Hem</a>
+                <a href="#lektioner" class="nav-link">Lektioner</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hem">
+        <div class="hero-content">
+            <h2>Studieanteckningar 2026</h2>
+            <p>En samling av lärdomar från industriautomation, fastighetsautomation och IoT. Här samlas texter, illustrationer och insikter för att förklara komplexa koncept på ett tillgängligt sätt.</p>
+        </div>
+        <div class="hero-decoration">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Lessons Grid -->
+    <section class="lessons" id="lektioner">
+        <div class="container">
+            <h2 class="section-title">Lektioner</h2>
+            <div class="lessons-grid">
+                <!-- Lesson 1 -->
+                <a href="lesson-1.html" class="lesson-card lesson-card-1">
+                    <div class="lesson-image">
+                        <div class="placeholder-image">01</div>
+                    </div>
+                    <div class="lesson-content">
+                        <h3>Vad är industriell automation?</h3>
+                        <p>En översikt av vad industriell automation omfattar – hur teknik används för att styra, övervaka och effektivisera maskiner och arbetsflöden. Genom att kombinera sensorer, styrutrustning och programvara skapas stabila och tillförlitliga system som minskar manuellt arbete och ökar precisionen.</p>
+                        <span class="learn-more">Läs mer →</span>
+                    </div>
+                </a>
+
+                <!-- Lesson 2 -->
+                <a href="lesson-2.html" class="lesson-card lesson-card-2">
+                    <div class="lesson-image">
+                        <div class="placeholder-image">02</div>
+                    </div>
+                    <div class="lesson-content">
+                        <h3>Från PLC till SCADA – översikt av styrsystem</h3>
+                        <p>Styrsystem utgör verksamhetens tekniska hjärna och ansvarar för att maskiner och processer fungerar som de ska. PLC och liknande system styr det som händer i praktiken, medan överordnade system som SCADA samlar information och ger en samlad överblick över hela anläggningen.</p>
+                        <span class="learn-more">Läs mer →</span>
+                    </div>
+                </a>
             </div>
-            <div>
-                <label for="message">Ditt budskap</label>
-                <textarea id="message" name="Budskap" rows="2" placeholder="Skriv ditt budskap..." required></textarea>
-            </div>
-            <div>
-                <label for="email">Din epostadress</label>
-                <input type="email" id="email" name="E-post" required placeholder="namn@mail.se" autocomplete="email">
-            </div>
-            <div style="margin: 1.2rem 0 0.5rem 0; align-self: stretch; display: flex; justify-content: center;">
-                <!-- reCAPTCHA borttagen pga domänfel -->
-            </div>
-            <button type="submit">Beställ dikt – gratis</button>
-        </form>
-    </div>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Studieanteckningar. Skapad av Teresia</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
